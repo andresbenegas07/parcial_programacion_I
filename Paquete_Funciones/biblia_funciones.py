@@ -5,30 +5,30 @@ import random
 # <------------------------------------- MENÚ --------------------------------------------- >
 
 
-mensaje_menu = "Seleccione la opción: \n\n[1] para ... \n[2] para ... \n[3] para ...\n"
-mensaje_menu += "[4] para ... \n[5] para... \n[6] para ... \n"
-mensaje_menu += "[7] para ... \n[8] para... \n\nSELECCIONE: "
+# mensaje_menu = "Seleccione la opción: \n\n[1] para ... \n[2] para ... \n[3] para ...\n"
+# mensaje_menu += "[4] para ... \n[5] para... \n[6] para ... \n"
+# mensaje_menu += "[7] para ... \n[8] para... \n\nSELECCIONE: "
 
-while True:
-    menu = int(input(mensaje_menu))
+# while True:
+#     menu = int(input(mensaje_menu))
 
-    match menu:
-        case 1:
-            pass    
-        case 2:
-            pass    
-        case 3:
-            pass
-        case 4:
-            pass
-        case 5:
-            pass
-        case 6:
-            pass
-        case 7:
-            pass   
-        case 8:
-            break
+#     match menu:
+#         case 1:
+#             pass    
+#         case 2:
+#             pass    
+#         case 3:
+#             pass
+#         case 4:
+#             pass
+#         case 5:
+#             pass
+#         case 6:
+#             pass
+#         case 7:
+#             pass   
+#         case 8:
+#             break
 
 
 
@@ -38,14 +38,14 @@ while True:
 
 # Inicializar matríz
 def inicializar_matriz(cantidad_filas:int, cantidad_columnas:int, valor_inicial:any) -> list:
-    
+            
     matriz = []
-    
+        
     for i in range(cantidad_filas):
         fila = [valor_inicial] * cantidad_columnas
 
         matriz += [fila]
-    
+        
     return matriz
 
 
@@ -73,7 +73,7 @@ def cargar_matriz_aleatoriamente(matriz:list):
 
 
 #IMPRIMIR Matriz
-def imprimir_tablero(matriz):
+def imprimir_matriz(matriz):
 
     for i in range(len(matriz)):
         for j in range(len(matriz[i])):
@@ -98,6 +98,21 @@ def sumatoria_total(matriz):
         for j in range(len(matriz[i])):
             total += matriz[i][j]
     return total 
+
+def sumatoria_fila(matriz:list):
+    suma_total_filas = []
+    for i in range(len(matriz)):
+        sumatoria_elementos = 0
+        for j in range(len(matriz[i])):
+            sumatoria_elementos += matriz[i][j]
+        suma_total_filas += [sumatoria_elementos]
+    return suma_total_filas
+
+
+
+#Verifica igualdad en la suma total de elementos de cada fila y retorna booleano 
+def verificar_igualdad_suma_de_filas(matriz:list):
+    
 
 
 
