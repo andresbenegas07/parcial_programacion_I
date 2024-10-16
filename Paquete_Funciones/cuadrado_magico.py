@@ -1,6 +1,8 @@
 import random
 from biblia_funciones import *
 
+
+
 matriz_cuadrada = inicializar_matriz(3, 3, 0)
 
 imprimir_matriz(matriz_cuadrada)
@@ -9,9 +11,26 @@ cargar_matriz_secuencialmente(matriz_cuadrada)
 
 imprimir_matriz(matriz_cuadrada)
 
-matriz_sumada = sumatoria_fila(matriz_cuadrada)
 
-print(matriz_sumada)
+
+
+filas_sumadas = sumatoria_fila(matriz_cuadrada)
+
+print(filas_sumadas)
+
+print(verificar_igualdad_suma_de_filas(filas_sumadas))
+
+
+
+
+
+columnas_sumadas = sumatoria_columna(matriz_cuadrada)
+
+print(columnas_sumadas)
+
+print(verificar_igualdad_suma_de_columnas(columnas_sumadas))
+
+
 
 
 

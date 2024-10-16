@@ -72,7 +72,7 @@ def cargar_matriz_aleatoriamente(matriz:list):
 
 
 
-#IMPRIMIR Matriz
+# IMPRIMIR Matriz
 def imprimir_matriz(matriz):
 
     for i in range(len(matriz)):
@@ -82,7 +82,7 @@ def imprimir_matriz(matriz):
 
 
 
-#BUSCAR dato en matriz
+# BUSCAR dato en matriz
 def buscar_valor_entero(matriz:list, valor:int):
     for i in range(len(matriz)):
         for j in range(len(matriz[i])):
@@ -99,6 +99,8 @@ def sumatoria_total(matriz):
             total += matriz[i][j]
     return total 
 
+
+# Suma todos los elementos de la FILA
 def sumatoria_fila(matriz:list):
     suma_total_filas = []
     for i in range(len(matriz)):
@@ -110,9 +112,36 @@ def sumatoria_fila(matriz:list):
 
 
 
-#Verifica igualdad en la suma total de elementos de cada fila y retorna booleano 
-def verificar_igualdad_suma_de_filas(matriz:list):
+# Suma todos los elementos de la COLUMNA
+def sumatoria_columna(matriz:list):
+    suma_total_columna = []
     
+    for j in range(len(matriz)):
+        sumatoria_elementos = 0
+        for i in range(len(matriz)):
+            sumatoria_elementos += matriz[i][j]
+        suma_total_columna += [sumatoria_elementos]
+    return suma_total_columna
+
+
+
+#Verifica igualdad en la suma total de elementos de cada fila y retorna booleano 
+def verificar_igualdad_suma_de_filas(matriz:list)-> bool:
+    
+    for i in range(len(matriz)):
+        if matriz[i] != matriz[0]:
+            return False 
+    return True   
+
+
+
+#Verifica igualdad en la suma total de elementos de cada COLUMNA y retorna booleano 
+def verificar_igualdad_suma_de_columnas(matriz:list)-> bool:
+    
+    for j in range(len(matriz)):
+        if matriz[j] != matriz[0]:
+            return False 
+    return True   
 
 
 
