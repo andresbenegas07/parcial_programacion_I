@@ -91,7 +91,7 @@ def buscar_valor_entero(matriz:list, valor:int):
 
 
 
-# Suma absolutamente todos los elementos de la matriz
+# Suma absolutamente TODOS los elementos de la matriz
 def sumatoria_total(matriz):
     total = 0
     for i in range(len(matriz)):
@@ -125,7 +125,7 @@ def sumatoria_columna(matriz:list):
 
 
 
-#Verifica igualdad en la suma total de elementos de cada fila y retorna booleano 
+# Verifica igualdad en la suma total de elementos de cada fila y retorna booleano 
 def verificar_igualdad_suma_de_filas(matriz:list)-> bool:
     
     for i in range(len(matriz)):
@@ -135,13 +135,23 @@ def verificar_igualdad_suma_de_filas(matriz:list)-> bool:
 
 
 
-#Verifica igualdad en la suma total de elementos de cada COLUMNA y retorna booleano 
+# Verifica igualdad en la suma total de elementos de cada COLUMNA y retorna booleano 
 def verificar_igualdad_suma_de_columnas(matriz:list)-> bool:
     
     for j in range(len(matriz)):
         if matriz[j] != matriz[0]:
             return False 
     return True   
+
+
+
+# Verifica si el cuadrado es mágico (si tanto filas como columnas son iguales)
+def es_cuadrado(matriz:list, matriz_dos:list)-> bool:
+    if matriz and matriz_dos == True:
+        return True
+    else:
+        return False
+
 
 
 
